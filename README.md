@@ -9,9 +9,11 @@ Send and receive After Effects expressions to / from the selected properties.
 ### SEND
 
 From VS Code
+
 ![AE expression - send (VS Code)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_01.gif?token=ACS446GMOMTSSQ3HBL4XX4TABGAXO)
 
 To After Effects
+
 ![AE expression - send (AE)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_02.gif?token=ACS446CGAH5ZNZ6BPQH5C5DABGA5A)
 
 #### After Effects Expressions \| Send \- Usage
@@ -46,12 +48,15 @@ To After Effects
 Converts the selected lines to JS string (single-line / concatenated / multi-line).
 
 Single-line
+
 ![JS to String - single line](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_01.gif?token=ACS446GHOFRQHT36KVW6KLTABG3H2)
 
 Concatenated
+
 ![JS to String - concatenated](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_02.gif?token=ACS446AWCHQ6DQHYCUJ223TABHDOY)
 
 Template literal
+
 ![JS to String - template literal](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_03.gif?token=ACS446E2CQTTO2KAGHFWAJTABHDSI)
 
 ### JS selection to String - Usage
