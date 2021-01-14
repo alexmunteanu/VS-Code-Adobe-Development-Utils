@@ -1,43 +1,102 @@
-##### <span style="color:rgb(176, 203, 71)">APPLIED</span>
+# VS Code Adobe Development Utils
 
-```
+This toolkit extension for Visual Studio Code provides several utilities for developing Adobe scripts & extensions and working with After Effects expressions.
 
-```
+## After Effects Expressions
 
-```
+Send and receive After Effects expressions to/from the selected properties.
 
-```
+### SEND
 
-##### <span style="color:rgb(212, 45, 45)">ERROR</span>
+<br>
+From VS Code
+![AE expression - send (VS Code)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_01.gif?token=ACS446GMOMTSSQ3HBL4XX4TABGAXO)
+To After Effects
+![AE expression - send (AE)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_02.gif?token=ACS446CGAH5ZNZ6BPQH5C5DABGA5A)
 
-```
+#### Usage
 
-```
+- In After Effects, select the properties on which you want to apply the expression.
+- In VS Code, select the JS lines you want to apply as an `AE expression` (the entire lines will be selected automatically).
+- Then do one of the following:
+  - Press `Alt + E`
+  - Right-click and choose `Adobe Dev Utils: Send AE expression`
 
-```
+#### Notes
 
-```
+- In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`
 
-##### <span style="color:rgb(34, 176, 191)">NOT SUPPORTED</span>
+### RECEIVE
 
-```
+![AE expression - receive](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_receive.gif?token=ACS446GPALAFBPU6NR4N5T3ABGFZ6)
 
-```
+#### Usage
 
-```
+- In After Effects, select the properties having the expressions you want to send to VS Code.
+- In VS Code do one of the following:
+  - Press `Alt + I`
+  - Right-click and choose `Adobe Dev Utils: Receive AE expressions`
 
-```
+<br>
+#### Notes
 
-##### <span style="color:rgb(86, 86, 86)">NO PROPERTY SELECTED</span>
+- In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`
 
-```
+## JS selection to String
 
-```
+<span class="colour" style="color:rgb(201, 209, 217)">Converts the selected lines to JS string (single-line / concatenated / multi-line).</span>
 
-```
+<span class="colour" style="color:rgb(201, 209, 217)">Single-line</span>
+![JS to String - single line](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_01.gif?token=ACS446GHOFRQHT36KVW6KLTABG3H2)
 
-```
+Concatenated
+![JS to String - concatenated](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_02.gif?token=ACS446AWCHQ6DQHYCUJ223TABHDOY)
 
-<span style="color:rgba(237,176,20,1)">_No active composition._</span>
+Template literal
+![JS to String - template literal](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_03.gif?token=ACS446E2CQTTO2KAGHFWAJTABHDSI)
 
-Uses [JavaScript Obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator)
+#### Usage
+
+- Make a selection (the entire lines will be selected automatically).
+- Then do one of the following:
+  - Press `Alt + D`
+  - Right-click and select `Adobe Dev Utils: JS selection to String`
+
+#### Notes
+
+- If `adobeDevUtils.jsToString.string.stringStyle` is set to `concatenated / multi-line` and `adobeDevUtils.jsToString.string.quotesStyle` is set as `template literal`, the extension will generate a multi-line template literal.
+- Check the extension's settings for other options.
+
+## JS obfuscation
+
+Obfuscate and protect the selected JS lines. Uses [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator).
+
+![JS obfuscation](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_obfuscate.gif?token=ACS446A477US3PO3UBWLPLDABHFKO)
+
+#### Usage
+
+- Make a selection (the entire lines will be selected automatically).
+- Then do one of the following:
+  - Press `Shift + Alt + D`
+  - Right-click and select `Adobe Dev Utils: obfuscate JS selection`
+
+<br>
+#### Notes
+
+- Check the extension's settings to modify the obfuscator's options.
+
+## JSXBIN encoding
+
+Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [ExtendScript Debugger](https://marketplace.visualstudio.com/items?itemName=Adobe.extendscript-debug).
+
+![JSXBIN encoding](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_encode.gif?token=ACS446G2AH4A34QYZDYU5T3ABHGGM)
+
+## Installation
+
+- From VS Code
+  - Open Extensions and type `vscode-adobe-dev-utils`
+  - Click `Install` and reload window.
+- From GitHub
+  - Download the repository and unzip the package.
+  - Copy `VS-Code-Adobe-Development-Utils-master` to `/Users/YOURUSER/.vscode/extensions` folder.
+  - Reload VS Code window.

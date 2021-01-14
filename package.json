@@ -80,7 +80,7 @@
       },
       {
         "command": "adobe_dev_utils.ae.expression.send",
-        "title": "Adobe Dev Utils: Send After Effects expressions",
+        "title": "Adobe Dev Utils: Send After Effects expression",
         "category": "Adobe Dev Utils"
       },
       {
@@ -172,14 +172,14 @@
           "adobeDevUtils.jsToString.string.stringStyle": {
             "type": "string",
             "description": "Select the string style.",
-            "default": "concatenated",
+            "default": "concatenated / multi-line",
             "enum": [
               "single-line",
-              "concatenated"
+              "concatenated / multi-line"
             ],
             "enumDescriptions": [
               "Convert the selected lines to a single line JS string.",
-              "Convert the selected lines to a concatenated JS string"
+              "Convert the selected lines to a concatenated JS string or a multi-line template literal."
             ]
           },
           "adobeDevUtils.jsToString.string.quotesStyle": {
@@ -558,8 +558,8 @@
         "properties": {
           "adobeDevUtils.ae.expression.aePath": {
             "type": "string",
-            "default": "C:/Program Files/Adobe/Adobe After Effects 2020/Support Files/AfterFX.exe",
-            "markdownDescription": "**Windows** only: Path to Adobe After Effects executable (`AfterFX.exe`)"
+            "default": "C:/Program Files/Adobe/Adobe After Effects 2020",
+            "markdownDescription": "**Windows** only: Adobe After Effects installation path."
           }
         }
       }
