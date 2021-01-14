@@ -14,7 +14,7 @@ From VS Code
 To After Effects
 ![AE expression - send (AE)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_02.gif?token=ACS446CGAH5ZNZ6BPQH5C5DABGA5A)
 
-#### After Effects Expressions | Send - Usage
+#### After Effects Expressions \| Send \- Usage
 
 - In After Effects, select the properties on which you want to apply the expression.
 - In VS Code, select the JS lines you want to apply as an `AE expression` (the entire lines will be selected automatically).
@@ -22,7 +22,7 @@ To After Effects
   - Press `Alt + E`.
   - Right-click and choose `Adobe Dev Utils: Send AE expression`.
 
-#### After Effects Expressions | Send - Notes
+#### After Effects Expressions \| Send \- Notes
 
 - In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`.
 
@@ -30,14 +30,14 @@ To After Effects
 
 ![AE expression - receive](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_receive.gif?token=ACS446GPALAFBPU6NR4N5T3ABGFZ6)
 
-#### After Effects Expressions | Receive - Usage
+#### After Effects Expressions \| Receive \- Usage
 
 - In After Effects, select the properties having the expressions you want to send to VS Code.
 - In VS Code do one of the following:
   - Press `Alt + I`.
   - Right-click and choose `Adobe Dev Utils: Receive AE expressions`.
 
-#### After Effects Expressions | Receive - Notes
+#### After Effects Expressions \| Receive \- Notes
 
 - In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`.
 
@@ -113,3 +113,7 @@ Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [E
   - Copy `VS-Code-Adobe-Development-Utils-master` to `/Users/YOURUSER/.vscode/extensions` folder.
   - Run `npm install`.
   - Reload VS Code.
+
+## Buy me a beer
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-success?style=for-the-badge&link=https://www.paypal.com/donate?hosted_button_id=Z8FGYYW9L28YC)](https://www.paypal.com/donate?hosted_button_id=Z8FGYYW9L28YC)
