@@ -7,7 +7,7 @@
   "author": {
     "name": "Alex Munteanu"
   },
-  "icon": "./images/ico_vscode-adobe-dev-utils_256px.png",
+  "icon": "images/ico_vscode-adobe-dev-utils_256px.png",
   "languages": {
     "list": [
       "javascript",
