@@ -52,7 +52,8 @@
     "onCommand:adobe_dev_utils.obfuscate_js",
     "onCommand:adobe_dev_utils.encode_jsxbin",
     "onCommand:adobe_dev_utils.obfuscate_encode",
-    "onCommand:adobe_dev_utils.ae.apply_expression"
+    "onCommand:adobe_dev_utils.ae.expression.send",
+    "onCommand:adobe_dev_utils.ae.expression.receive"
   ],
   "main": "./lib/vscode-adobe-dev-utils.js",
   "contributes": {
@@ -78,8 +79,13 @@
         "category": "Adobe Dev Utils"
       },
       {
-        "command": "adobe_dev_utils.ae.apply_expression",
-        "title": "Adobe Dev Utils: Apply After Effects expression",
+        "command": "adobe_dev_utils.ae.expression.send",
+        "title": "Adobe Dev Utils: Send After Effects expressions",
+        "category": "Adobe Dev Utils"
+      },
+      {
+        "command": "adobe_dev_utils.ae.expression.receive",
+        "title": "Adobe Dev Utils: Receive After Effects expressions",
         "category": "Adobe Dev Utils"
       }
     ],
@@ -109,9 +115,15 @@
         "when": "editorTextFocus"
       },
       {
-        "command": "adobe_dev_utils.ae.apply_expression",
+        "command": "adobe_dev_utils.ae.expression.send",
         "key": "alt+e",
         "mac": "alt+e",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "adobe_dev_utils.ae.expression.receive",
+        "key": "alt+i",
+        "mac": "alt+i",
         "when": "editorTextFocus"
       }
     ],
@@ -134,8 +146,12 @@
           "group": "grp@4"
         },
         {
-          "command": "adobe_dev_utils.ae.apply_expression",
+          "command": "adobe_dev_utils.ae.expression.send",
           "group": "grp@5"
+        },
+        {
+          "command": "adobe_dev_utils.ae.expression.receive",
+          "group": "grp@6"
         }
       ]
     },
@@ -538,9 +554,9 @@
       },
       {
         "type": "object",
-        "title": "Adobe Dev Utils: AE Apply Expression",
+        "title": "Adobe Dev Utils: Send/receive After Effects Expressions",
         "properties": {
-          "adobeDevUtils.ae.applyExpression.aePath": {
+          "adobeDevUtils.ae.expression.aePath": {
             "type": "string",
             "default": "C:/Program Files/Adobe/Adobe After Effects 2020/Support Files/AfterFX.exe",
             "markdownDescription": "**Windows** only: Path to Adobe After Effects executable (`AfterFX.exe`)"
