@@ -91,6 +91,21 @@ Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [E
 
 ![JSXBIN encoding](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_encode.gif?token=ACS446G2AH4A34QYZDYU5T3ABHGGM)
 
+#### Usage
+
+- Make a selection (the entire lines will be selected automatically).
+- Then do one of the following:
+  - Press `Ctrl + Shift + Alt + E` on Windows or `Cmd + Shift + Alt + E` on Mac
+  - Right-click and select `Adobe Dev Utils: encode JS selection to JSXBIN`
+
+<br>
+#### Notes
+
+- Check the extension's settings
+- The JS lines can be obfuscated first before they are encoded to JSXBIN by doing one of the following:
+  - Press `Ctrl + Shift + Tab` on Windows or `Cmd + Shift + Tab` on Mac
+  - Right-click and select `Adobe Dev Utils: obfuscate + encode JS selection to JSXBIN`
+
 ## Installation
 
 - From VS Code
@@ -99,4 +114,5 @@ Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [E
 - From GitHub
   - Download the repository and unzip the package.
   - Copy `VS-Code-Adobe-Development-Utils-master` to `/Users/YOURUSER/.vscode/extensions` folder.
+  - Run `npm install`
   - Reload VS Code window.
