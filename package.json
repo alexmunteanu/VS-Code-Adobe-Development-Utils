@@ -568,7 +568,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/alexmunteanu/vscode-adobe-dev-utils"
+    "url": "https://github.com/alexmunteanu/VS-Code-Adobe-Development-Utils"
   },
   "dependencies": {
     "decomment": "^0.9.3",
