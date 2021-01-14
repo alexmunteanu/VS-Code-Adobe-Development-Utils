@@ -4,12 +4,13 @@ This toolkit extension for Visual Studio Code provides several utilities for dev
 
 ## After Effects Expressions
 
-Send and receive After Effects expressions to/from the selected properties.
+Send and receive After Effects expressions to / from the selected properties.
 
 ### SEND
 
 From VS Code
 ![AE expression - send (VS Code)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_01.gif?token=ACS446GMOMTSSQ3HBL4XX4TABGAXO)
+
 To After Effects
 ![AE expression - send (AE)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_02.gif?token=ACS446CGAH5ZNZ6BPQH5C5DABGA5A)
 
@@ -18,12 +19,12 @@ To After Effects
 - In After Effects, select the properties on which you want to apply the expression.
 - In VS Code, select the JS lines you want to apply as an `AE expression` (the entire lines will be selected automatically).
 - Then do one of the following:
-  - Press `Alt + E`
-  - Right-click and choose `Adobe Dev Utils: Send AE expression`
+  - Press `Alt + E`.
+  - Right-click and choose `Adobe Dev Utils: Send AE expression`.
 
 #### After Effects Expressions | Send - Notes
 
-- In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`
+- In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`.
 
 ### RECEIVE
 
@@ -33,12 +34,12 @@ To After Effects
 
 - In After Effects, select the properties having the expressions you want to send to VS Code.
 - In VS Code do one of the following:
-  - Press `Alt + I`
-  - Right-click and choose `Adobe Dev Utils: Receive AE expressions`
+  - Press `Alt + I`.
+  - Right-click and choose `Adobe Dev Utils: Receive AE expressions`.
 
 #### After Effects Expressions | Receive - Notes
 
-- In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`
+- In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`.
 
 ## JS selection to String
 
@@ -57,8 +58,8 @@ Template literal
 
 - Make a selection (the entire lines will be selected automatically).
 - Then do one of the following:
-  - Press `Alt + D`
-  - Right-click and select `Adobe Dev Utils: JS selection to String`
+  - Press `Alt + D`.
+  - Right-click and select `Adobe Dev Utils: JS selection to String`.
 
 ### JS selection to String - Notes
 
@@ -75,8 +76,8 @@ Obfuscate and protect the selected JS lines. Uses [javascript-obfuscator](https
 
 - Make a selection (the entire lines will be selected automatically).
 - Then do one of the following:
-  - Press `Shift + Alt + D`
-  - Right-click and select `Adobe Dev Utils: obfuscate JS selection`
+  - Press `Shift + Alt + D`.
+  - Right-click and select `Adobe Dev Utils: obfuscate JS selection`.
 
 ### JS obfuscation - Notes
 
@@ -92,23 +93,23 @@ Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [E
 
 - Make a selection (the entire lines will be selected automatically).
 - Then do one of the following:
-  - Press `Ctrl + Shift + Alt + E` on Windows or `Cmd + Shift + Alt + E` on Mac
-  - Right-click and select `Adobe Dev Utils: encode JS selection to JSXBIN`
+  - Press `Ctrl + Shift + Alt + E` on Windows or `Cmd + Shift + Alt + E` on Mac.
+  - Right-click and select `Adobe Dev Utils: encode JS selection to JSXBIN`.
 
 ### JSXBIN encoding - Notes
 
-- Check the extension's settings
+- Check the extension's settings.
 - The JS lines can be obfuscated first before they are encoded to JSXBIN by doing one of the following:
-  - Press `Ctrl + Shift + Tab` on Windows or `Cmd + Shift + Tab` on Mac
-  - Right-click and select `Adobe Dev Utils: obfuscate + encode JS selection to JSXBIN`
+  - Press `Ctrl + Shift + Tab` on Windows or `Cmd + Shift + Tab` on Mac.
+  - Right-click and select `Adobe Dev Utils: obfuscate + encode JS selection to JSXBIN`.
 
 ## Installation
 
 - From VS Code
-  - Open Extensions and type `vscode-adobe-dev-utils`
+  - Open Extensions and type `vscode-adobe-dev-utils`.
   - Click `Install` and reload window.
 - From GitHub
   - Download the repository and unzip the package.
   - Copy `VS-Code-Adobe-Development-Utils-master` to `/Users/YOURUSER/.vscode/extensions` folder.
-  - Run `npm install`
-  - Reload VS Code window.
+  - Run `npm install`.
+  - Reload VS Code.
