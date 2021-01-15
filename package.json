@@ -2,7 +2,7 @@
   "name": "adobe-dev-utils",
   "displayName": "Adobe Development Utils",
   "description": "Provides several utilities for Adobe scripts development.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "alexmunteanu",
   "icon": "images/ico_vscode-adobe-dev-utils_256px.png",
   "languages": {
@@ -259,7 +259,7 @@
           },
           "adobeDevUtils.encodeJsxbin.notification.showWarnings": {
             "type": "boolean",
-            "default": false,
+            "default": true,
             "markdownDescription": "Show a pop-up warning if the script processing time might increase."
           }
         }
