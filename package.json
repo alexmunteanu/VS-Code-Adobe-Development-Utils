@@ -1,12 +1,9 @@
 {
   "name": "vscode-adobe-dev-utils",
-  "displayName": "VS Code Adobe Development Utils",
+  "displayName": "Adobe Development Utils",
   "description": "Provides several utilities for Adobe scripts development.",
   "version": "1.0.0",
   "publisher": "alexmunteanu",
-  "author": {
-    "name": "Alex Munteanu"
-  },
   "icon": "images/ico_vscode-adobe-dev-utils_256px.png",
   "languages": {
     "list": [
@@ -55,7 +52,7 @@
     "onCommand:adobe_dev_utils.ae.expression.send",
     "onCommand:adobe_dev_utils.ae.expression.receive"
   ],
-  "main": "./lib/vscode-adobe-dev-utils.js",
+  "main": "lib/vscode-adobe-dev-utils.js",
   "contributes": {
     "commands": [
       {

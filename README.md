@@ -1,4 +1,4 @@
-# VS Code Adobe Development Utils
+# Adobe Development Utils
 
 This toolkit extension for Visual Studio Code provides several utilities for developing Adobe scripts & extensions and working with After Effects expressions.
 
