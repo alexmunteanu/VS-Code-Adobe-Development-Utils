@@ -4,7 +4,7 @@
   "description": "Provides several utilities for Adobe scripts development.",
   "version": "1.0.2",
   "publisher": "alexmunteanu",
-  "icon": "images/ico_vscode-adobe-dev-utils_256px.png",
+  "icon": "images/ico_vscode-adobe-dev-utils_128px.png",
   "languages": {
     "list": [
       "javascript",
