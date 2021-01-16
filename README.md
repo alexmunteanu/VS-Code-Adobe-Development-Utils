@@ -111,7 +111,7 @@ Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [E
 ## Installation
 
 - From VS Code
-  - Open Extensions and type `vscode-adobe-dev-utils`.
+  - Open Extensions and type `adobe-dev-utils`.
   - Click `Install` and reload window.
 - From GitHub
   - Download the repository and unzip the package.
