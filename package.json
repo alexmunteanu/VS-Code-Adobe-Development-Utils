@@ -2,7 +2,7 @@
   "name": "adobe-dev-utils",
   "displayName": "Adobe Development Utils",
   "description": "Provides several utilities for Adobe scripts development.",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "publisher": "alexmunteanu",
   "icon": "images/ico_vscode-adobe-dev-utils_256px.png",
   "languages": {
@@ -101,8 +101,8 @@
       },
       {
         "command": "adobe_dev_utils.encode_jsxbin",
-        "key": "alt+ctrl+d",
-        "mac": "alt+cmd+d",
+        "key": "ctrl+alt+d",
+        "mac": "cmd+alt+d",
         "when": "editorTextFocus"
       },
       {
