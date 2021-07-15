@@ -1,5 +1,12 @@
 # Adobe Development Utils | Changelog
 
+## 1.0.3 (2021-07-15)
+
+### Added
+
+- **After Effects Expressions | Send**
+If no code is selected the entire document will be sent to After Effects.
+
 ## 1.0.2 (2021-01-16)
 
 ### Fixed

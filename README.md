@@ -19,7 +19,7 @@ To After Effects
 #### After Effects Expressions \| Send \- Usage
 
 - In After Effects, select the properties on which you want to apply the expression.
-- In VS Code, select the JS lines you want to apply as an `AE expression` (the entire lines will be selected automatically).
+- In VS Code, select the JS lines you want to apply as an `AE expression` (the entire lines will be selected automatically); if no code is selected the entire document will be sent to After Effects.
 - Then do one of the following:
   - Press `Alt + E`.
   - Right-click and choose `Adobe Dev Utils: Send AE expression`.
