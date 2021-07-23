@@ -1,5 +1,11 @@
 # Adobe Development Utils | Changelog
 
+## 1.1.0 (2021-07-23)
+
+### Changed
+
+- Dependencies update.
+
 ## 1.0.3 (2021-07-15)
 
 ### Added

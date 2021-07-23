@@ -2,7 +2,7 @@
   "name": "adobe-dev-utils",
   "displayName": "Adobe Development Utils",
   "description": "Provides several utilities for Adobe scripts development.",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "publisher": "alexmunteanu",
   "icon": "images/ico_vscode-adobe-dev-utils_128px.png",
   "languages": {
@@ -322,6 +322,11 @@
             "default": [],
             "markdownDescription": "Allows to run the obfuscated source code only on specific domains and/or sub-domains. This makes really hard for someone to just copy and paste your source code and run it elsewhere."
           },
+          "adobeDevUtils.jsObfuscation.domainLockRedirectUrl": {
+            "type": "string",
+            "default": "about:blank",
+            "markdownDescription": "This option does not work with `target: 'node'`\nAllows the browser to be redirected to a passed URL if the source code isn't run on the domains specified by `domainLock`"
+          },
           "adobeDevUtils.jsObfuscation.forceTransformStrings": {
             "type": "array",
             "default": [],
@@ -406,7 +411,16 @@
           "adobeDevUtils.jsObfuscation.renameProperties": {
             "type": "boolean",
             "default": false,
-            "markdownDescription": "Enables renaming of property names. All built-in DOM properties and properties in core JavaScript classes will be ignored.\nTo set format of renamed property names use `identifierNamesGenerator` option.\nTo control which properties will be renamed use `reservedNames` option.\nthis option WILL break your code in most cases. Enable it only if you know what it does!"
+            "markdownDescription": "This option MAY break your code. Enable it only if you know what it does!\nEnables renaming of property names. All built-in DOM properties and properties in core JavaScript classes will be ignored.\nTo switch between `safe` and `unsafe` modes of this option use `renamePropertiesMode` option.\nTo set format of renamed property names use `identifierNamesGenerator` option.\nTo control which properties will be renamed use `reservedNames` option.\nthis option WILL break your code in most cases. Enable it only if you know what it does!"
+          },
+          "adobeDevUtils.jsObfuscation.renamePropertiesMode": {
+            "type": "string",
+            "default": "safe",
+            "enum": [
+              "safe",
+              "unsafe"
+            ],
+            "markdownDescription": "Even in `safe` mode, `renameProperties` option MAY break your code."
           },
           "adobeDevUtils.jsObfuscation.reservedNames": {
             "type": "array",
@@ -477,7 +491,7 @@
             "default": true,
             "markdownDescription": "Removes string literals and place them in a special array. For instance, the string `\"Hello World\"` in `var m = \"Hello World\";` will be replaced with something like `var m = _0x12c456[0x1];`"
           },
-          "adobeDevUtils.jsObfuscation.stringArrayCallsIndexType": {
+          "adobeDevUtils.jsObfuscation.stringArrayIndexesType": {
             "type": "array",
             "default": [
               "hexadecimal-number"
@@ -568,9 +582,9 @@
     "url": "https://github.com/alexmunteanu/VS-Code-Adobe-Development-Utils"
   },
   "dependencies": {
-    "decomment": "^0.9.3",
+    "decomment": "^0.9.4",
     "del": "^6.0.0",
-    "javascript-obfuscator": "^2.10.1",
-    "js-beautify": "^1.13.4"
+    "javascript-obfuscator": "^2.17.0",
+    "js-beautify": "^1.14.0"
   }
 }
