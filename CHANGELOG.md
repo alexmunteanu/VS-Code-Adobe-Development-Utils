@@ -1,5 +1,17 @@
 # Adobe Development Utils | Changelog
 
+## 1.1.1 (2021-08-29)
+
+### Added
+
+- **Conversions**:
+	- Hex escape
+	- Hex unescape
+
+### Changed
+
+- Dependencies update.
+
 ## 1.1.0 (2021-07-23)
 
 ### Changed

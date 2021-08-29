@@ -2,7 +2,7 @@
   "name": "adobe-dev-utils",
   "displayName": "Adobe Development Utils",
   "description": "Provides several utilities for Adobe scripts development.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "publisher": "alexmunteanu",
   "icon": "images/ico_vscode-adobe-dev-utils_128px.png",
   "languages": {
@@ -50,7 +50,9 @@
     "onCommand:adobe_dev_utils.encode_jsxbin",
     "onCommand:adobe_dev_utils.obfuscate_encode",
     "onCommand:adobe_dev_utils.ae.expression.send",
-    "onCommand:adobe_dev_utils.ae.expression.receive"
+    "onCommand:adobe_dev_utils.ae.expression.receive",
+    "onCommand:adobe_dev_utils.ae.convert.hex.escape",
+    "onCommand:adobe_dev_utils.ae.convert.hex.unescape"
   ],
   "main": "lib/adobe-dev-utils.js",
   "contributes": {
@@ -83,6 +85,16 @@
       {
         "command": "adobe_dev_utils.ae.expression.receive",
         "title": "Adobe Dev Utils: Receive After Effects expressions",
+        "category": "Adobe Dev Utils"
+      },
+      {
+        "command": "adobe_dev_utils.ae.convert.hex.escape",
+        "title": "Adobe Dev Utils: Hex escape",
+        "category": "Adobe Dev Utils"
+      },
+      {
+        "command": "adobe_dev_utils.ae.convert.hex.unescape",
+        "title": "Adobe Dev Utils: Hex unescape",
         "category": "Adobe Dev Utils"
       }
     ],
@@ -122,6 +134,18 @@
         "key": "alt+i",
         "mac": "alt+i",
         "when": "editorTextFocus"
+      },
+      {
+        "command": "adobe_dev_utils.ae.convert.hex.escape",
+        "key": "alt+h",
+        "mac": "alt+h",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "adobe_dev_utils.ae.convert.hex.unescape",
+        "key": "alt+u",
+        "mac": "alt+u",
+        "when": "editorTextFocus"
       }
     ],
     "menus": {
@@ -149,6 +173,14 @@
         {
           "command": "adobe_dev_utils.ae.expression.receive",
           "group": "grp@6"
+        },
+        {
+          "command": "adobe_dev_utils.ae.convert.hex.escape",
+          "group": "grp@7"
+        },
+        {
+          "command": "adobe_dev_utils.ae.convert.hex.unescape",
+          "group": "grp@8"
         }
       ]
     },
@@ -584,7 +616,8 @@
   "dependencies": {
     "decomment": "^0.9.4",
     "del": "^6.0.0",
-    "javascript-obfuscator": "^2.17.0",
-    "js-beautify": "^1.14.0"
+    "javascript-obfuscator": "^2.19.0",
+    "js-beautify": "^1.14.0",
+    "jsesc": "^3.0.2"
   }
 }

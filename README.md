@@ -108,6 +108,15 @@ Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [E
   - Press `Ctrl + Shift + Tab` on Windows or `Cmd + Shift + Tab` on Mac.
   - Right-click and select `Adobe Dev Utils: obfuscate + encode JS selection to JSXBIN`.
 
+## Conversion
+
+### HEX
+
+![Convert HEX](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_convert_hex.gif)
+
+- Escape (shortcut `Alt + H`)
+- Unescape (shortcut `Alt + U`)
+
 ## Installation
 
 - From VS Code
@@ -119,6 +128,6 @@ Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [E
   - Run `npm install`.
   - Reload VS Code.
 
-## Buy me a beer
+## Donate
 
 [![Donate](https://img.shields.io/badge/Donate-PayPal-success?style=for-the-badge&link=https://www.paypal.com/donate?hosted_button_id=Z8FGYYW9L28YC)](https://www.paypal.com/donate?hosted_button_id=Z8FGYYW9L28YC)
