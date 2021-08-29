@@ -2,7 +2,7 @@
   "name": "adobe-dev-utils",
   "displayName": "Adobe Development Utils",
   "description": "Provides several utilities for Adobe scripts development.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "publisher": "alexmunteanu",
   "icon": "images/ico_vscode-adobe-dev-utils_128px.png",
   "languages": {
@@ -617,7 +617,6 @@
     "decomment": "^0.9.4",
     "del": "^6.0.0",
     "javascript-obfuscator": "^2.19.0",
-    "js-beautify": "^1.14.0",
-    "jsesc": "^3.0.2"
+    "js-beautify": "^1.14.0"
   }
 }
