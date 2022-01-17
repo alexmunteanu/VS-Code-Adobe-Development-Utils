@@ -3,6 +3,7 @@
 This toolkit extension for Visual Studio Code provides several utilities for developing Adobe scripts & extensions and working with After Effects expressions.
 
 If you find it useful and want to support me, you can do it [here](https://www.paypal.com/donate?hosted_button_id=Z8FGYYW9L28YC).
+
 [![Donate](https://img.shields.io/badge/Donate-PayPal-success?style=for-the-badge&link=https://www.paypal.com/donate?hosted_button_id=Z8FGYYW9L28YC)](https://www.paypal.com/donate?hosted_button_id=Z8FGYYW9L28YC)
 
 ## Script Build
