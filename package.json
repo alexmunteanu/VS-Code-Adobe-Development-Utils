@@ -2,7 +2,7 @@
   "name": "adobe-dev-utils",
   "displayName": "Adobe Development Utils",
   "description": "Provides several utilities for Adobe scripts development.",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "publisher": "alexmunteanu",
   "icon": "images/ico_vscode-adobe-dev-utils_128px.png",
   "languages": {
@@ -49,6 +49,7 @@
     "onCommand:adobe_dev_utils.obfuscate_js",
     "onCommand:adobe_dev_utils.encode_jsxbin",
     "onCommand:adobe_dev_utils.obfuscate_encode",
+    "onCommand:adobe_dev_utils.build",
     "onCommand:adobe_dev_utils.ae.expression.send",
     "onCommand:adobe_dev_utils.ae.expression.receive",
     "onCommand:adobe_dev_utils.ae.convert.hex.escape",
@@ -64,17 +65,22 @@
       },
       {
         "command": "adobe_dev_utils.obfuscate_js",
-        "title": "Adobe Dev Utils: obfuscate JS selection",
+        "title": "Adobe Dev Utils: Obfuscate JS selection",
         "category": "Adobe Dev Utils"
       },
       {
         "command": "adobe_dev_utils.encode_jsxbin",
-        "title": "Adobe Dev Utils: encode JS selection to JSXBIN",
+        "title": "Adobe Dev Utils: Encode JS selection to JSXBIN",
         "category": "Adobe Dev Utils"
       },
       {
         "command": "adobe_dev_utils.obfuscate_encode",
-        "title": "Adobe Dev Utils: obfuscate + encode JS selection to JSXBIN",
+        "title": "Adobe Dev Utils: Obfuscate + Encode JS selection to JSXBIN",
+        "category": "Adobe Dev Utils"
+      },
+      {
+        "command": "adobe_dev_utils.build",
+        "title": "Adobe Dev Utils: Build the script",
         "category": "Adobe Dev Utils"
       },
       {
@@ -124,6 +130,12 @@
         "when": "editorTextFocus"
       },
       {
+        "command": "adobe_dev_utils.build",
+        "key": "ctrl+shift+alt+b",
+        "mac": "cmd+shift+alt+b",
+        "when": "editorTextFocus"
+      },
+      {
         "command": "adobe_dev_utils.ae.expression.send",
         "key": "alt+e",
         "mac": "alt+e",
@@ -167,20 +179,24 @@
           "group": "grp@4"
         },
         {
-          "command": "adobe_dev_utils.ae.expression.send",
+          "command": "adobe_dev_utils.build",
           "group": "grp@5"
         },
         {
-          "command": "adobe_dev_utils.ae.expression.receive",
+          "command": "adobe_dev_utils.ae.expression.send",
           "group": "grp@6"
         },
         {
-          "command": "adobe_dev_utils.ae.convert.hex.escape",
+          "command": "adobe_dev_utils.ae.expression.receive",
           "group": "grp@7"
         },
         {
-          "command": "adobe_dev_utils.ae.convert.hex.unescape",
+          "command": "adobe_dev_utils.ae.convert.hex.escape",
           "group": "grp@8"
+        },
+        {
+          "command": "adobe_dev_utils.ae.convert.hex.unescape",
+          "group": "grp@9"
         }
       ]
     },
@@ -243,7 +259,7 @@
           },
           "adobeDevUtils.jsToString.jsBeautifier.beautify": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "description": "The selected code will be first beautified and then stringified."
           },
           "adobeDevUtils.jsToString.jsBeautifier.tabSize": {
@@ -464,24 +480,14 @@
             "default": [],
             "markdownDescription": "Disables transformation of string literals, which being matched by passed RegExp patterns."
           },
-          "adobeDevUtils.jsObfuscation.rotateStringArray": {
-            "type": "boolean",
-            "default": true,
-            "markdownDescription": "Shift the `stringArray` array by a fixed and random (generated at the code obfuscation) places. This makes it harder to match the order of the removed strings to their original place.\n`stringArray` must be enabled."
-          },
           "adobeDevUtils.jsObfuscation.selfDefending": {
             "type": "boolean",
             "default": false,
             "markdownDescription": "This option makes the output code resilient against formatting and variable renaming. If one tries to use a JavaScript beautifier on the obfuscated code, the code won't work anymore, making it harder to understand and modify it.\nDon't change obfuscated code in any way after obfuscation with this option, because any change like uglifying of code can trigger self defending and code wont work anymore!\nThis option forcibly sets `compact` value to `true`"
           },
-          "adobeDevUtils.jsObfuscation.shuffleStringArray": {
-            "type": "boolean",
-            "default": true,
-            "markdownDescription": "Randomly shuffles the `stringArray` array items.\n`stringArray` must be enabled."
-          },
           "adobeDevUtils.jsObfuscation.simplify": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "markdownDescription": "Enables additional code obfuscation through simplification."
           },
           "adobeDevUtils.jsObfuscation.sourceMap": {
@@ -510,7 +516,7 @@
           },
           "adobeDevUtils.jsObfuscation.splitStrings": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "markdownDescription": "Splits literal strings into chunks with length of `splitStringsChunkLength` option value."
           },
           "adobeDevUtils.jsObfuscation.splitStringsChunkLength": {
@@ -520,7 +526,7 @@
           },
           "adobeDevUtils.jsObfuscation.stringArray": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "markdownDescription": "Removes string literals and place them in a special array. For instance, the string `\"Hello World\"` in `var m = \"Hello World\";` will be replaced with something like `var m = _0x12c456[0x1];`"
           },
           "adobeDevUtils.jsObfuscation.stringArrayIndexesType": {
@@ -541,8 +547,18 @@
           },
           "adobeDevUtils.jsObfuscation.stringArrayIndexShift": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "markdownDescription": "Enables additional index shift for all string array calls.\n`stringArray` option must be enabled."
+          },
+          "adobeDevUtils.jsObfuscation.stringArrayRotate": {
+            "type": "boolean",
+            "default": false,
+            "markdownDescription": "Shift the `stringArray` array by a fixed and random (generated at the code obfuscation) places. This makes it harder to match the order of the removed strings to their original place.\n`stringArray` must be enabled."
+          },
+          "adobeDevUtils.jsObfuscation.stringArrayShuffle": {
+            "type": "boolean",
+            "default": false,
+            "markdownDescription": "Randomly shuffles the `stringArray` array items.\n`stringArray` must be enabled."
           },
           "adobeDevUtils.jsObfuscation.stringArrayWrappersCount": {
             "type": "integer",
@@ -551,7 +567,7 @@
           },
           "adobeDevUtils.jsObfuscation.stringArrayWrappersChainedCalls": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "markdownDescription": "Enables the chained calls between `string array` wrappers.\n`stringArray` and `stringArrayWrappersCount` options must be enabled."
           },
           "adobeDevUtils.jsObfuscation.stringArrayWrappersParametersMaxCount": {
@@ -585,13 +601,59 @@
           },
           "adobeDevUtils.jsObfuscation.transformObjectKeys": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "markdownDescription": "Enables transformation of object keys."
           },
           "adobeDevUtils.jsObfuscation.unicodeEscapeSequence": {
             "type": "boolean",
-            "default": true,
+            "default": false,
             "markdownDescription": "Allows to enable/disable string conversion to unicode escape sequence.\nUnicode escape sequence increases code size greatly and strings easily can be reverted to their original view. Recommended to enable this option only for small source code."
+          }
+        }
+      },
+      {
+        "type": "object",
+        "title": "Adobe Dev Utils: Build",
+        "properties": {
+          "adobeDevUtils.build.folderName": {
+            "type": "string",
+            "default": "_build",
+            "markdownDescription": "Name of the folder where the script will be created."
+          },
+          "adobeDevUtils.build.obfuscate": {
+            "type": "boolean",
+            "default": true,
+            "markdownDescription": "Obfuscate the script."
+          },
+          "adobeDevUtils.build.jsxbin": {
+            "type": "boolean",
+            "default": true,
+            "markdownDescription": "Encode the script to JSXBIN."
+          },
+          "adobeDevUtils.build.addHeader": {
+            "type": "boolean",
+            "default": false,
+            "markdownDescription": "Add a script header."
+          },
+          "adobeDevUtils.build.headerAuthor": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "The script's author."
+          },
+          "adobeDevUtils.build.headerAuthorWebpage": {
+            "type": "string",
+            "default": "",
+            "markdownDescription": "The script's author webpage."
+          },
+          "adobeDevUtils.build.headerScriptVersion": {
+            "type": "boolean",
+            "default": false,
+            "markdownDescription": "Add the script's version in the header."
+          },
+          "adobeDevUtils.build.headerBuildDate": {
+            "type": "boolean",
+            "default": false,
+            "markdownDescription": "Add the script's build date in the header."
           }
         }
       },
@@ -601,7 +663,7 @@
         "properties": {
           "adobeDevUtils.ae.expression.aePath": {
             "type": "string",
-            "default": "C:/Program Files/Adobe/Adobe After Effects 2020",
+            "default": "C:/Program Files/Adobe/Adobe After Effects 2022",
             "markdownDescription": "**Windows** only: Adobe After Effects installation path."
           }
         }
@@ -614,9 +676,14 @@
     "url": "https://github.com/alexmunteanu/VS-Code-Adobe-Development-Utils"
   },
   "dependencies": {
-    "decomment": "^0.9.4",
+    "decomment": "^0.9.5",
     "del": "^6.0.0",
-    "javascript-obfuscator": "^2.19.0",
-    "js-beautify": "^1.14.0"
+    "gulp": "^4.0.2",
+    "gulp-header": "^2.0.9",
+    "gulp-include": "^2.4.1",
+    "gulp-rename": "^2.0.0",
+    "javascript-obfuscator": "^3.0.0",
+    "js-beautify": "^1.14.0",
+    "path": "^0.12.7"
   }
 }

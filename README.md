@@ -2,6 +2,24 @@
 
 This toolkit extension for Visual Studio Code provides several utilities for developing Adobe scripts & extensions and working with After Effects expressions.
 
+If you find it useful and want to support me, you can do it [here](https://www.paypal.com/donate?hosted_button_id=Z8FGYYW9L28YC).
+[![Donate](https://img.shields.io/badge/Donate-PayPal-success?style=for-the-badge&link=https://www.paypal.com/donate?hosted_button_id=Z8FGYYW9L28YC)](https://www.paypal.com/donate?hosted_button_id=Z8FGYYW9L28YC)
+
+## Script Build
+
+Pack your script into a single file, with the following options:
+
+- script obfuscation (see [JS Obfuscation](#js-obfuscation))
+- script JSXBIN encoding (see [JSXBIN Encoding](#jsxbin-encoding))
+- script header (script name, description, version, build date, license, author, author webpage)
+
+Check the extension's settings (`adobeDevUtils.build`) for more.
+
+### Script Build - Notes
+
+This feature does not replace a proper building tool such as gulp, grunt etc.
+It's just a quick way of delivering your scripts.
+
 ## After Effects Expressions
 
 Send and receive After Effects expressions to / from the selected properties.
@@ -71,37 +89,37 @@ Template literal
 - If `adobeDevUtils.jsToString.string.stringStyle` is set to `concatenated / multi-line` and `adobeDevUtils.jsToString.string.quotesStyle` is set as `template literal`, the extension will generate a multi-line template literal.
 - Check the extension's settings for other options.
 
-## JS obfuscation
+## JS Obfuscation
 
 Obfuscate and protect the selected JS lines. Uses [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator).
 
-![JS obfuscation](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_obfuscate.gif?token=ACS446A477US3PO3UBWLPLDABHFKO)
+![JS Obfuscation](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_obfuscate.gif?token=ACS446A477US3PO3UBWLPLDABHFKO)
 
-### JS obfuscation - Usage
+### JS Obfuscation - Usage
 
 - Make a selection (the entire lines will be selected automatically).
 - Then do one of the following:
   - Press `Shift + Alt + D`.
   - Right-click and select `Adobe Dev Utils: obfuscate JS selection`.
 
-### JS obfuscation - Notes
+### JS Obfuscation - Notes
 
 - Check the extension's settings to modify the obfuscator's options.
 
-## JSXBIN encoding
+## JSXBIN Encoding
 
 Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [ExtendScript Debugger](https://marketplace.visualstudio.com/items?itemName=Adobe.extendscript-debug).
 
-![JSXBIN encoding](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_encode.gif?token=ACS446G2AH4A34QYZDYU5T3ABHGGM)
+![JSXBIN Encoding](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_encode.gif?token=ACS446G2AH4A34QYZDYU5T3ABHGGM)
 
-### JSXBIN encoding - Usage
+### JSXBIN Encoding - Usage
 
 - Make a selection (the entire lines will be selected automatically).
 - Then do one of the following:
   - Press `Ctrl + Shift + Alt + E` on Windows or `Cmd + Shift + Alt + E` on Mac.
   - Right-click and select `Adobe Dev Utils: encode JS selection to JSXBIN`.
 
-### JSXBIN encoding - Notes
+### JSXBIN Encoding - Notes
 
 - Check the extension's settings.
 - The JS lines can be obfuscated first before they are encoded to JSXBIN by doing one of the following:

@@ -1,5 +1,18 @@
 # Adobe Development Utils | Changelog
 
+## 1.2.0 (2022-01-17)
+
+### Added
+
+- **Build**: Pack your script in a single file, with the following options:
+	- script obfuscation
+	- script JSXBIN encoding
+	- script header (script name, description, version, build date, license, author, author webpage)
+
+### Changed
+
+- Dependencies update.
+
 ## 1.1.2 (2021-08-29)
 
 ### Added
