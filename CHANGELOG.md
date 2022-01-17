@@ -1,5 +1,11 @@
 # Adobe Development Utils | Changelog
 
+## 1.2.3 (2022-01-17)
+
+### Added
+
+- **Build**: `// @include` compatibility
+
 ## 1.2.2 (2022-01-17)
 
 ### Added
