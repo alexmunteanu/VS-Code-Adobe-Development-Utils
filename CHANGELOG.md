@@ -1,5 +1,13 @@
 # Adobe Development Utils | Changelog
 
+## 1.3.0 (2022-07-24)
+
+### Changed
+
+- Dependencies update:
+	- `esdebugger-core` updated to v2.0.3
+	- `javascript-obfuscator` updated to v4.0.0
+
 ## 1.2.3 (2022-01-17)
 
 ### Added
