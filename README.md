@@ -29,11 +29,11 @@ Send and receive After Effects expressions to / from the selected properties.
 
 From VS Code
 
-![AE expression - send (VS Code)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_01.gif?token=ACS446GMOMTSSQ3HBL4XX4TABGAXO)
+![AE expression - send (VS Code)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_01.gif)
 
 To After Effects
 
-![AE expression - send (AE)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_02.gif?token=ACS446CGAH5ZNZ6BPQH5C5DABGA5A)
+![AE expression - send (AE)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_02.gif)
 
 #### After Effects Expressions \| Send \- Usage
 
@@ -45,11 +45,11 @@ To After Effects
 
 #### After Effects Expressions \| Send \- Notes
 
-- In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`.
+- In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`.
 
 ### RECEIVE
 
-![AE expression - receive](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_receive.gif?token=ACS446GPALAFBPU6NR4N5T3ABGFZ6)
+![AE expression - receive](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_receive.gif)
 
 #### After Effects Expressions \| Receive \- Usage
 
@@ -60,7 +60,7 @@ To After Effects
 
 #### After Effects Expressions \| Receive \- Notes
 
-- In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`.
+- In Windows: make sure the After Effects installation path is correctly set-up in the extension's settings `adobeDevUtils.ae.expression.aePath`.
 
 ## JS selection to String
 
@@ -68,15 +68,15 @@ Converts the selected lines to JS string (single-line / concatenated / multi-lin
 
 Single-line
 
-![JS to String - single line](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_01.gif?token=ACS446GHOFRQHT36KVW6KLTABG3H2)
+![JS to String - single line](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_01.gif)
 
 Concatenated
 
-![JS to String - concatenated](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_02.gif?token=ACS446AWCHQ6DQHYCUJ223TABHDOY)
+![JS to String - concatenated](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_02.gif)
 
 Template literal
 
-![JS to String - template literal](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_03.gif?token=ACS446E2CQTTO2KAGHFWAJTABHDSI)
+![JS to String - template literal](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_03.gif)
 
 ### JS selection to String - Usage
 
@@ -87,14 +87,14 @@ Template literal
 
 ### JS selection to String - Notes
 
-- If `adobeDevUtils.jsToString.string.stringStyle` is set to `concatenated / multi-line` and `adobeDevUtils.jsToString.string.quotesStyle` is set as `template literal`, the extension will generate a multi-line template literal.
+- If `adobeDevUtils.jsToString.string.stringStyle` is set to `concatenated / multi-line` and `adobeDevUtils.jsToString.string.quotesStyle` is set as `template literal`, the extension will generate a multi-line template literal.
 - Check the extension's settings for other options.
 
 ## JS Obfuscation
 
-Obfuscate and protect the selected JS lines. Uses [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator).
+Obfuscate and protect the selected JS lines. Uses [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator).
 
-![JS Obfuscation](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_obfuscate.gif?token=ACS446A477US3PO3UBWLPLDABHFKO)
+![JS Obfuscation](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_obfuscate.gif)
 
 ### JS Obfuscation - Usage
 
@@ -109,23 +109,27 @@ Obfuscate and protect the selected JS lines. Uses [javascript-obfuscator](https
 
 ## JSXBIN Encoding
 
-Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [ExtendScript Debugger](https://marketplace.visualstudio.com/items?itemName=Adobe.extendscript-debug).
+Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [ExtendScript Debugger](https://marketplace.visualstudio.com/items?itemName=Adobe.extendscript-debug).
 
-![JSXBIN Encoding](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_encode.gif?token=ACS446G2AH4A34QYZDYU5T3ABHGGM)
+![JSXBIN Encoding](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_encode.gif)
 
 ### JSXBIN Encoding - Usage
 
 - Make a selection (the entire lines will be selected automatically).
 - Then do one of the following:
-  - Press `Ctrl + Shift + Alt + E` on Windows or `Cmd + Shift + Alt + E` on Mac.
+  - Press `Ctrl + Shift + Alt + E` on Windows or `Cmd + Shift + Alt + E` on Mac.
   - Right-click and select `Adobe Dev Utils: encode JS selection to JSXBIN`.
 
 ### JSXBIN Encoding - Notes
 
 - Check the extension's settings.
 - The JS lines can be obfuscated first before they are encoded to JSXBIN by doing one of the following:
-  - Press `Ctrl + Shift + Tab` on Windows or `Cmd + Shift + Tab` on Mac.
+  - Press `Ctrl + Shift + Tab` on Windows or `Cmd + Shift + Tab` on Mac.
   - Right-click and select `Adobe Dev Utils: obfuscate + encode JS selection to JSXBIN`.
+- The JSXBIN compiler is the ExtendScript engine, which understands **ES3** JavaScript only. If encoding fails with a parser error such as `Expected: :`, the source contains syntax the ExtendScript compiler cannot parse.
+  - This most often happens when obfuscating before encoding: some `javascript-obfuscator` options emit syntax that is not ES3-compatible.
+  - For a known-compatible result when using `obfuscate + encode`, keep these obfuscation options **off** in the extension's settings (`adobeDevUtils.jsObfuscation`): `numbersToExpressions`, `splitStrings`, `stringArray` (and its dependent `stringArrayEncoding` / `stringArrayWrappersType: function`), `controlFlowFlattening`, `selfDefending`, `transformObjectKeys`, `renameProperties`.
+  - The default obfuscation settings already have these disabled. If you enabled any of them, turn them back off before encoding, or encode the non-obfuscated source.
 
 ## Conversion
 
@@ -139,11 +143,11 @@ Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [E
 ## Installation
 
 - From VS Code
-  - Open Extensions and type `adobe-dev-utils`.
+  - Open Extensions and type `adobe-dev-utils`.
   - Click `Install` and reload window.
 - From GitHub
   - Download the repository and unzip the package.
-  - Copy `VS-Code-Adobe-Development-Utils-master` to `/Users/YOURUSER/.vscode/extensions` folder.
+  - Copy `VS-Code-Adobe-Development-Utils-master` to `/Users/YOURUSER/.vscode/extensions` folder.
   - Run `npm install`.
   - Reload VS Code.
 

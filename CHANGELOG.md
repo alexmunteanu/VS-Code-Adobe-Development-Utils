@@ -1,5 +1,14 @@
 # Adobe Development Utils | Changelog
 
+## 1.3.1 (2026-06-19)
+
+### Fixed
+
+- **Menus & shortcuts** are no longer shown for unsupported languages; the context-menu items and keyboard shortcuts are now limited to JavaScript, JavaScript JSX and ExtendScript editors (#7, PR #6).
+- **ExtendScript** (`.jsx` files with the `extendscript` language mode) is now a supported language, resolving the `Adobe Dev Utils: Language not supported` error when obfuscating, encoding or stringifying ExtendScript files (#4).
+- **JSXBIN encoding** now shows a clearer, actionable error when the (obfuscated) source is not ExtendScript ES3-compatible, with guidance on a known-compatible obfuscation configuration (#5).
+- **README**: fixed broken image links that returned 404 on GitHub and the Marketplace page (#8).
+
 ## 1.3.0 (2022-07-25)
 
 ### Changed
