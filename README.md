@@ -29,11 +29,11 @@ Send and receive After Effects expressions to / from the selected properties.
 
 From VS Code
 
-![AE expression - send (VS Code)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_01.gif?token=ACS446GMOMTSSQ3HBL4XX4TABGAXO)
+![AE expression - send (VS Code)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_01.gif)
 
 To After Effects
 
-![AE expression - send (AE)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_02.gif?token=ACS446CGAH5ZNZ6BPQH5C5DABGA5A)
+![AE expression - send (AE)](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_02.gif)
 
 #### After Effects Expressions \| Send \- Usage
 
@@ -49,7 +49,7 @@ To After Effects
 
 ### RECEIVE
 
-![AE expression - receive](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_receive.gif?token=ACS446GPALAFBPU6NR4N5T3ABGFZ6)
+![AE expression - receive](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_ae_expression_receive.gif)
 
 #### After Effects Expressions \| Receive \- Usage
 
@@ -68,15 +68,15 @@ Converts the selected lines to JS string (single-line / concatenated / multi-lin
 
 Single-line
 
-![JS to String - single line](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_01.gif?token=ACS446GHOFRQHT36KVW6KLTABG3H2)
+![JS to String - single line](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_01.gif)
 
 Concatenated
 
-![JS to String - concatenated](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_02.gif?token=ACS446AWCHQ6DQHYCUJ223TABHDOY)
+![JS to String - concatenated](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_02.gif)
 
 Template literal
 
-![JS to String - template literal](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_03.gif?token=ACS446E2CQTTO2KAGHFWAJTABHDSI)
+![JS to String - template literal](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_js_to_string_03.gif)
 
 ### JS selection to String - Usage
 
@@ -94,7 +94,7 @@ Template literal
 
 Obfuscate and protect the selected JS lines. Uses [javascript-obfuscator](https://github.com/javascript-obfuscator/javascript-obfuscator).
 
-![JS Obfuscation](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_obfuscate.gif?token=ACS446A477US3PO3UBWLPLDABHFKO)
+![JS Obfuscation](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_obfuscate.gif)
 
 ### JS Obfuscation - Usage
 
@@ -111,7 +111,7 @@ Obfuscate and protect the selected JS lines. Uses [javascript-obfuscator](https
 
 Encodes the selected JSX lines to JSXBIN. it uses the `@esdebug` module from [ExtendScript Debugger](https://marketplace.visualstudio.com/items?itemName=Adobe.extendscript-debug).
 
-![JSXBIN Encoding](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_encode.gif?token=ACS446G2AH4A34QYZDYU5T3ABHGGM)
+![JSXBIN Encoding](https://raw.githubusercontent.com/alexmunteanu/VS-Code-Adobe-Development-Utils/master/images/vscode-adobe-dev-utils_encode.gif)
 
 ### JSXBIN Encoding - Usage
 
